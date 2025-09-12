@@ -744,7 +744,7 @@ class DahuaClient:
                 async for data, _ in response.content.iter_chunks():
                     on_receive(data, channel)
             except Exception as exception:
-                _LOGGER.exception(exception)
+                pass
             finally:
                 if response is not None:
                     response.close()
